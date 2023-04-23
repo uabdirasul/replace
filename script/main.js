@@ -6,6 +6,8 @@ const replaceLetter = (text) => {
     .replaceAll("U'", "Ú")
     .replaceAll("A'", "Á")
     .replaceAll("O'", "Ó")
+    .replaceAll("N'", "Ń")
+    .replaceAll("I'", "Í")
     .replaceAll("g'", "ǵ")
     .replaceAll("o'", "ó")
     .replaceAll("n'", "ń")
