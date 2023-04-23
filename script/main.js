@@ -11,6 +11,7 @@ const replaceLetter = (text) => {
     .replaceAll("g'", "ǵ")
     .replaceAll("o'", "ó")
     .replaceAll("n'", "ń")
+    .replaceAll("n’", "ń")
     .replaceAll("u'", "ú")
     .replaceAll("a'", "á")
     .replaceAll("i'", "ı");
