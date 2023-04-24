@@ -27,22 +27,21 @@ const replaceLetter = (text) => {
     .replaceAll("i’", "ı");
 };
 
-const copyContent = async (text) => {
-  if (text) {
-    navigator.clipboard
-      .writeText(replaceLetter(textarea.value))
-      .then(() => {
-        alert(`Kóshirildi: ${text.slice(0, 12)}...`);
-      })
-      .catch(() => {
-        alert(`Qátelik boldı`);
-      });
-  } else {
-    alert("Tekst jazıń");
-  }
+const copyContent = async () => {
+  let copyText = document.querySelector(".text");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard
+    .writeText(replaceLetter(copyText.value))
+    .then(() => {
+      alert(`Kóshirildi: ${copyText.value.slice(0, 12)}...`);
+      copyText.value = "";
+    })
+    .catch(() => {
+      alert(`Qátelik boldı`);
+    });
 };
 
 button.addEventListener("click", () => {
-  copyContent(textarea.value);
-  textarea.value = "";
+  copyContent();
 });
