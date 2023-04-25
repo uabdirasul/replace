@@ -1,5 +1,7 @@
 const textarea = document.querySelector(".text");
 const button = document.querySelector(".copyButton");
+const alertSuccess = document.querySelector(".alert--success");
+const alertFail = document.querySelector(".alert--fail");
 
 const replaceLetter = (text) => {
   return text
@@ -31,15 +33,21 @@ const copyContent = async () => {
   let copyText = document.querySelector(".text");
   copyText.select();
   copyText.setSelectionRange(0, 99999);
-  navigator.clipboard
-    .writeText(replaceLetter(copyText.value))
-    .then(() => {
-      alert(`Kóshirildi: ${copyText.value.slice(0, 12)}...`);
-      copyText.value = "";
-    })
-    .catch(() => {
-      alert(`Qátelik boldı`);
-    });
+  navigator.clipboard.writeText(replaceLetter(copyText.value)).then(() => {
+    if (copyText.value) {
+      alertSuccess.style.display = "flex";
+      setTimeout(() => {
+        alertSuccess.style.display = "none";
+      }, 5000);
+    } else {
+      alertFail.style.display = "flex";
+      setTimeout(() => {
+        alertFail.style.display = "none";
+      }, 5000);
+    }
+
+    copyText.value = "";
+  });
 };
 
 button.addEventListener("click", () => {
