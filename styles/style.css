@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+
 html {
   font-size: 16px;
 }
@@ -17,6 +19,7 @@ h1 {
   margin: 0.5rem;
   padding: 0;
   font-size: 1.3rem;
+  font-family: "Oswald", sans-serif;
 }
 
 textarea {
@@ -27,15 +30,18 @@ textarea {
   border-radius: 5px;
   padding: 1rem;
   margin-bottom: 1rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
 }
 
 button {
   color: #fff;
   background-color: transparent;
   border: 1px solid #fff;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.7rem;
   border-radius: 0.5rem;
   cursor: pointer;
+  font-family: "Oswald", sans-serif;
 }
 
 button:hover {
@@ -51,6 +57,7 @@ button:active {
 
 .alert {
   position: absolute;
+  font-family: "Oswald", sans-serif;
   background-color: #e2e2e2;
   top: 5.7%;
   right: 1%;
