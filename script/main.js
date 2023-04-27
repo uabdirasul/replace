@@ -2,7 +2,7 @@ const textarea = document.querySelector(".text");
 const button = document.querySelector(".copyButton");
 const alertSuccess = document.querySelector(".alert--success");
 const alertFail = document.querySelector(".alert--fail");
-const alertLogoClose = document.querySelectorAll(".alert--logo__close");
+const closeButtons = document.querySelectorAll(".alert--logo__close");
 
 const replaceLetter = (text) => {
   return text
@@ -55,7 +55,7 @@ button.addEventListener("click", () => {
   copyContent();
 });
 
-alertLogoClose.forEach((closeButton) => {
+closeButtons.forEach((closeButton) => {
   closeButton.addEventListener("click", () => {
     const alert = closeButton.closest(".alert");
     alert.remove();
