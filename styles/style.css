@@ -35,10 +35,18 @@ button {
   border: 1px solid #fff;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(221, 215, 178);
+  color: #000;
 }
 
 button:active {
-  padding: 0.3rem 0.5rem;
+  background-color: rgb(221, 215, 178);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .alert {
