@@ -55,6 +55,12 @@ button.addEventListener("click", () => {
   copyContent();
 });
 
+textarea.addEventListener("keydown", (e) => {
+  if (e.ctrlKey && e.key === "Enter") {
+    copyContent();
+  }
+});
+
 closeButtons.forEach((closeButton) => {
   closeButton.addEventListener("click", () => {
     const alert = closeButton.closest(".alert");
