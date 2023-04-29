@@ -1,3 +1,5 @@
+"use strict";
+
 const textarea = document.querySelector(".textarea");
 const button = document.querySelector(".copyButton");
 const alertSuccess = document.querySelector(".alert--success");
