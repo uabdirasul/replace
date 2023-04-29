@@ -1,4 +1,4 @@
-const textarea = document.querySelector(".text");
+const textarea = document.querySelector(".textarea");
 const button = document.querySelector(".copyButton");
 const alertSuccess = document.querySelector(".alert--success");
 const alertFail = document.querySelector(".alert--fail");
@@ -31,11 +31,10 @@ const replaceLetter = (text) => {
 };
 
 const copyContent = async () => {
-  let copyText = document.querySelector(".text");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999);
-  navigator.clipboard.writeText(replaceLetter(copyText.value)).then(() => {
-    if (copyText.value) {
+  textarea.select();
+  textarea.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(replaceLetter(textarea.value)).then(() => {
+    if (textarea.value) {
       alertSuccess.style.display = "flex";
       setTimeout(() => {
         alertSuccess.style.display = "none";
@@ -47,7 +46,7 @@ const copyContent = async () => {
       }, 5000);
     }
 
-    copyText.value = "";
+    textarea.value = "";
   });
 };
 
