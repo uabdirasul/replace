@@ -103,3 +103,14 @@ button:active {
 .alert--logo__close {
   cursor: pointer;
 }
+
+.noscript {
+  display: block;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  border: 1px solid #fff;
+}
