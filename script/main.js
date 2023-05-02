@@ -84,6 +84,7 @@ button.addEventListener("click", () => {
 
 // Add an event listener to the textarea that listens for the keydown event
 textarea.addEventListener("keydown", (e) => {
+  alertFail.style.display = "none";
   // If the user presses Ctrl + Enter
   if (e.ctrlKey && e.key === "Enter") {
     // Call the copyContent function
