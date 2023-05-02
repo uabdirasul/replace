@@ -122,3 +122,7 @@ button:active {
   border-radius: 0.5rem;
   border: 1px solid #fff;
 }
+
+.noscript p {
+  line-height: 0;
+}
