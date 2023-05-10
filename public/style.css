@@ -14,20 +14,12 @@ body {
   padding: 0;
 }
 
-h1 {
+.header__title {
   color: #fff;
   margin: 0.5rem;
   padding: 0;
   font-size: 1.2rem;
   font-family: "Oswald", sans-serif;
-}
-
-.main {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 textarea {
@@ -110,19 +102,4 @@ button:active {
 
 .alert--logo__close {
   cursor: pointer;
-}
-
-.noscript {
-  display: block;
-  padding: 1rem;
-  margin: 1rem;
-  text-align: center;
-  color: #fff;
-  background-color: transparent;
-  border-radius: 0.5rem;
-  border: 1px solid #fff;
-}
-
-.noscript p {
-  line-height: 0;
 }
