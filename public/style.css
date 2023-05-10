@@ -33,6 +33,8 @@ img {
   margin-right: auto;
 }
 
+/* header styles */
+
 .header__title {
   color: #fff;
   margin: 0.5rem;
@@ -42,7 +44,15 @@ img {
   text-align: center;
 }
 
-textarea {
+/* main styles */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textarea {
   width: 70%;
   height: 30rem;
   resize: none;
@@ -54,7 +64,7 @@ textarea {
   font-size: 1rem;
 }
 
-button {
+.copyButton {
   color: #fff;
   background-color: transparent;
   border: 1px solid #fff;
@@ -64,12 +74,12 @@ button {
   font-family: "Oswald", sans-serif;
 }
 
-button:hover {
+.copyButton:hover {
   background-color: rgb(221, 215, 178);
   color: #000;
 }
 
-button:active {
+.copyButton:active {
   background-color: rgb(221, 215, 178);
   box-shadow: 0 5px #666;
   transform: translateY(4px);
