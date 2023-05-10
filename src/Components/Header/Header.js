@@ -8,9 +8,9 @@ export default class Header extends Component {
           <h1 className="header__title">
             Replace - Upgrade your Karakalpak letters
           </h1>
-          <div class="alert alert--success">
+          <div className="alert alert--success">
             <svg
-              class="alert--logo alert--logo__success"
+              className="alert--logo alert--logo__success"
               width="24px"
               height="24px"
               xmlns="http://www.w3.org/2000/svg"
@@ -18,9 +18,9 @@ export default class Header extends Component {
             >
               <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7l233.4-233.3c12.5-12.5 32.8-12.5 45.3 0z" />
             </svg>
-            <p class="alert--text alert--text__success">Kóshirildi</p>
+            <p className="alert--text alert--text__success">Kóshirildi</p>
             <svg
-              class="alert--logo alert--logo__close"
+              className="alert--logo alert--logo__close"
               width="24px"
               height="24px"
               xmlns="http://www.w3.org/2000/svg"
@@ -29,9 +29,9 @@ export default class Header extends Component {
               <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3l105.4 105.3c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256l105.3-105.4z" />
             </svg>
           </div>
-          <div class="alert alert--fail">
+          <div className="alert alert--fail">
             <svg
-              class="alert--logo alert--logo__fail"
+              className="alert--logo alert--logo__fail"
               width="24px"
               height="24px"
               xmlns="http://www.w3.org/2000/svg"
@@ -39,9 +39,11 @@ export default class Header extends Component {
             >
               <path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64v256c0 17.7 14.3 32 32 32s32-14.3 32-32V64zM32 480a40 40 0 1 0 0-80 40 40 0 1 0 0 80z" />
             </svg>
-            <p class="alert--text alert--text__fail">Qaytadan urınıp kóriń!</p>
+            <p className="alert--text alert--text__fail">
+              Qaytadan urınıp kóriń!
+            </p>
             <svg
-              class="alert--logo alert--logo__close"
+              className="alert--logo alert--logo__close"
               width="24px"
               height="24px"
               xmlns="http://www.w3.org/2000/svg"
