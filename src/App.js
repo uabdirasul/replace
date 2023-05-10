@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Header from "./Components/Header/Header";
+import Main from "./Components/Main/Main";
 
 export default class App extends Component {
   constructor(props) {
@@ -10,6 +11,7 @@ export default class App extends Component {
     return (
       <React.StrictMode>
         <Header />
+        <Main />
       </React.StrictMode>
     );
   }
