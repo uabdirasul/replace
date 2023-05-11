@@ -9,10 +9,10 @@ export default class App extends Component {
 
   render() {
     return (
-      <React.StrictMode>
+      <React.Fragment>
         <Header />
         <Main />
-      </React.StrictMode>
+      </React.Fragment>
     );
   }
 }
