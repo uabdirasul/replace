@@ -11,8 +11,7 @@ export default class Main extends Component {
     this.alertFailRef = createRef();
   }
 
-  componentDidMount() {}
-
+  /* This function handles the value of the input field */
   handleValue = (e) => {
     const { name, value } = e.target;
     this.setState({
@@ -20,6 +19,7 @@ export default class Main extends Component {
     });
   };
 
+  // * This function replaces certain characters in the input text with their accented versions.
   replaceLetter = () => {
     const { updateText } = this.state;
     return updateText
@@ -47,20 +47,27 @@ export default class Main extends Component {
       .replaceAll("i’", "ı");
   };
 
+  // * This function copies the processed text from the updateText state object to the clipboard.
   copyContent = () => {
     const { updateText } = this.state;
+
+    // Copy the processed text to the clipboard
     navigator.clipboard.writeText(this.replaceLetter());
     if (updateText) {
+      // If the textarea has content, display a success alert
       this.alertSuccessRef.current.style.display = "flex";
       setTimeout(() => {
         this.alertSuccessRef.current.style.display = "flex";
       }, 5000);
     } else {
+      // Otherwise, display a failure alert
       this.alertFailRef.current.style.display = "flex";
       setTimeout(() => {
         this.alertFailRef.current.style.display = "flex";
       }, 5000);
     }
+
+    // Clear the updateText state object
     this.setState({
       updateText: "",
     });
