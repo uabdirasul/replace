@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 
 export default class Main extends Component {
   constructor(props) {
@@ -6,7 +6,9 @@ export default class Main extends Component {
     this.state = {
       updateText: "",
     };
-    this.updateTextRef = React.createRef();
+    this.updateTextRef = createRef();
+    this.alertSuccessRef = createRef();
+    this.alertFailRef = createRef();
   }
 
   componentDidMount() {}
@@ -46,7 +48,19 @@ export default class Main extends Component {
   };
 
   copyContent = () => {
+    const { updateText } = this.state;
     navigator.clipboard.writeText(this.replaceLetter());
+    if (updateText) {
+      this.alertSuccessRef.current.style.display = "flex";
+      setTimeout(() => {
+        this.alertSuccessRef.current.style.display = "flex";
+      }, 5000);
+    } else {
+      this.alertFailRef.current.style.display = "flex";
+      setTimeout(() => {
+        this.alertFailRef.current.style.display = "flex";
+      }, 5000);
+    }
     this.setState({
       updateText: "",
     });
@@ -56,6 +70,50 @@ export default class Main extends Component {
     const { updateText } = this.state;
     return (
       <div className="container">
+        <div className="alert alert--success" ref={this.alertSuccessRef}>
+          <svg
+            className="alert--logo alert--logo__success"
+            width="24px"
+            height="24px"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7l233.4-233.3c12.5-12.5 32.8-12.5 45.3 0z" />
+          </svg>
+          <p className="alert--text alert--text__success">Kóshirildi</p>
+          <svg
+            className="alert--logo alert--logo__close"
+            width="24px"
+            height="24px"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512"
+          >
+            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3l105.4 105.3c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256l105.3-105.4z" />
+          </svg>
+        </div>
+        <div className="alert alert--fail" ref={this.alertFailRef}>
+          <svg
+            className="alert--logo alert--logo__fail"
+            width="24px"
+            height="24px"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 64 512"
+          >
+            <path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64v256c0 17.7 14.3 32 32 32s32-14.3 32-32V64zM32 480a40 40 0 1 0 0-80 40 40 0 1 0 0 80z" />
+          </svg>
+          <p className="alert--text alert--text__fail">
+            Qaytadan urınıp kóriń!
+          </p>
+          <svg
+            className="alert--logo alert--logo__close"
+            width="24px"
+            height="24px"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512"
+          >
+            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3l105.4 105.3c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256l105.3-105.4z" />
+          </svg>
+        </div>
         <main className="main">
           <textarea
             className="updateText"
