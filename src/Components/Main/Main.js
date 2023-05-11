@@ -57,13 +57,13 @@ export default class Main extends Component {
       // If the textarea has content, display a success alert
       this.alertSuccessRef.current.style.display = "flex";
       setTimeout(() => {
-        this.alertSuccessRef.current.style.display = "flex";
+        this.alertSuccessRef.current.style.display = "none";
       }, 5000);
     } else {
       // Otherwise, display a failure alert
       this.alertFailRef.current.style.display = "flex";
       setTimeout(() => {
-        this.alertFailRef.current.style.display = "flex";
+        this.alertFailRef.current.style.display = "none";
       }, 5000);
     }
 
