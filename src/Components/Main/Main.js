@@ -80,6 +80,12 @@ export default class Main extends Component {
     this.alertSuccessRef.current.style.display = "none";
   };
 
+  copyOnEnter = (e) => {
+    if (e.ctrlKey && e.key === "Enter") {
+      this.copyContent();
+    }
+  };
+
   render() {
     const { updateText } = this.state;
     return (
@@ -139,6 +145,7 @@ export default class Main extends Component {
             onChange={this.handleValue}
             ref={this.updateTextRef}
             value={updateText}
+            onKeyDown={this.copyOnEnter}
           ></textarea>
           <button className="copyButton" onClick={this.copyContent}>
             Kóshirip alıw
