@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Header from "./Components/Header/Header";
-import Main from "./Components/Main/Main";
+import Header from "./Layout/Header/Header";
+import Main from "./Layout/Main/Main";
 
 export default class App extends Component {
   constructor(props) {
