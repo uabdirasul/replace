@@ -33,6 +33,10 @@ img {
   margin-right: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* noscript */
 .noscript {
   display: block;
@@ -148,4 +152,15 @@ img {
 
 .alert--logo__close {
   cursor: pointer;
+}
+
+/* footer styles */
+
+.footer__container {
+  text-align: center;
+  color: #fff;
+}
+
+.footer__container a {
+  color: #6b65d3;
 }
