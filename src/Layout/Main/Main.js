@@ -75,11 +75,19 @@ export default class Main extends Component {
     });
   };
 
+  /**
+   * Hides two alert elements.
+   */
+
   hideAlert = () => {
     this.alertFailRef.current.style.display = "none";
     this.alertSuccessRef.current.style.display = "none";
   };
 
+  /**
+   * Copies the content of an element when the user presses the "Enter" key while holding down the "Ctrl" key.
+   * @param {Event} e - The event object.
+   */
   copyOnEnter = (e) => {
     if (e.ctrlKey && e.key === "Enter") {
       this.copyContent();
