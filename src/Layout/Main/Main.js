@@ -33,6 +33,8 @@ export default class Main extends Component {
       .replace(/N’/g, "Ń")
       .replace(/I'/g, "Í")
       .replace(/I’/g, "Í")
+      .replace(/G'/g, "Ǵ")
+      .replace(/G’/g, "Ǵ")
       .replace(/g'/g, "ǵ")
       .replace(/g’/g, "ǵ")
       .replace(/o'/g, "ó")
