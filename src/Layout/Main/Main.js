@@ -151,7 +151,7 @@ export default class Main extends Component {
             className="updateText"
             name="updateText"
             autoFocus
-            placeholder="Háriplerdi ózgertiw ushın ' belgisinen paydalanıp jazıń: tami'r => tamır"
+            placeholder="Háriplerdi ózgertiw ushın ' belgisinen paydalanıp jazıń: tami'r => tamır. Kóshirip alıw ushın: Ctrl + Enter"
             onChange={this.handleValue}
             ref={this.updateTextRef}
             value={updateText}
