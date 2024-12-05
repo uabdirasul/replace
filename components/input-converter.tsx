@@ -9,8 +9,8 @@ const InputConverter = ({ text, setText }: InputConverterProps) => {
   return (
     <div className="space-y-2">
       <p className="text-md text-muted-foreground">
-        Háriplerdi ózgertiw ushın ', ` sıyalı belgilerden paydalanıp jazıń:
-        ali'm {"=>"} alım.
+        Háriplerdi ózgertiw ushın &#39;, &#96; sıyalı belgilerden paydalanıp
+        jazıń: ali&#39;m {"=>"} alım.
       </p>
       <p className="text-md text-muted-foreground">
         Kóshirip alıw ushın:{" "}
