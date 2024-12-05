@@ -19,6 +19,7 @@ const InputConverter = ({ text, setText }: InputConverterProps) => {
         </span>
       </p>
       <Textarea
+        autoFocus={true}
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Text to convert..."
